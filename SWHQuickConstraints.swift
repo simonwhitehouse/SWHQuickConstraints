@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Enum explaining the type of constraint you want to add
 enum SWHConstraintType {
     case PinToTop(padding: CGFloat)
     case PinToBottom(padding: CGFloat)
@@ -22,8 +23,13 @@ enum SWHConstraintType {
     
 }
 
+/// A class for quickly adding constraints for a view
 class SWHQuickConstraints {
     
+    /**
+        - adds one view as a subview of another
+        - adds constraints for that view
+    **/
     class func addSubViewWithConstraints(subview: UIView, superView: UIView, quickConstraints: [SWHConstraintType]) {
         superView.addSubview(subview)
         
