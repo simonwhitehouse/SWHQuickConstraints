@@ -23,7 +23,7 @@ Centering a view with 100 width and 100 height
         
 Result
 
-![alt tag](http://s18.postimg.org/f8oe5lr5l/Screen_Shot_2015_09_24_at_21_23_40.png)
+![alt tag](http://s17.postimg.org/vbb50hy5b/Screen_Shot_2015_09_24_at_21_23_40.png)
 
 ## License
 
