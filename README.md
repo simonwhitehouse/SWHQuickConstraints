@@ -1,10 +1,16 @@
 # SWHQuickConstraints
 
+## Description
+
 Allows you to quickly and easily add simple constraints to a UIView
 
 Using quick constraints you can easily mock up a view and constraint it with ease
 
-Example
+## Usage
+
+To use just add the SWHQuickConstraints.swift file to your project
+
+## Example
 
 Centering a view with 100 width and 100 height
 
@@ -18,3 +24,7 @@ Centering a view with 100 width and 100 height
 Result
 
 ![alt tag](http://s18.postimg.org/f8oe5lr5l/Screen_Shot_2015_09_24_at_21_23_40.png)
+
+## License
+
+SWHQuickConstraints is released under the MIT license. See 'Licence' for details.
