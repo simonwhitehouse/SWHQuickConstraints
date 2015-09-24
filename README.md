@@ -1,2 +1,20 @@
 # SWHQuickConstraints
+
 Allows you to quickly and easily add simple constraints to a UIView
+
+Using quick constraints you can easily mock up a view and constraint it with ease
+
+Example
+
+Centering a view with 100 width and 100 height
+
+        SWHQuickConstraints.addSubViewWithConstraints(testView, superView: container, quickConstraints: [
+            .CenterHorizontal(padding: 0),
+            .CenterVertically(padding: 100),
+            .Width(width: 100),
+            .Height(height: 100)
+        ])
+        
+Result
+
+![alt tag](http://s18.postimg.org/f8oe5lr5l/Screen_Shot_2015_09_24_at_21_23_40.png)
