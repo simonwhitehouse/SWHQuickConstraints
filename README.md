@@ -30,6 +30,35 @@ To use just add the SWHQuickConstraints.swift file to your project
             .Height(height: 100)
         ])
 
+3. Top Bar with two subviews 
+
+        SWHQuickConstraints.addSubViewWithConstraints(testView, superView: container, quickConstraints: [
+            SWHConstraintType.PinToTop(padding: 0),
+            .PinToLeft(padding: 0),
+            .PinToRight(padding: 0),
+            .Height(height: 40)
+        ])
+
+        let leftSubView = UIView(frame: CGRectMake(0, 0, 30, 30))
+        leftSubView.backgroundColor = UIColor.whiteColor()
+
+        SWHQuickConstraints.addSubViewWithConstraints(leftSubView, superView: testView, quickConstraints: [
+            SWHConstraintType.CenterVertically(padding: 0),
+            SWHConstraintType.PinToLeft(padding: 20),
+            SWHConstraintType.Width(width: 30),
+            SWHConstraintType.Height(height: 30)
+        ])
+
+        let rightSubview = UIView(frame: CGRectMake(0, 0, 30, 30))
+        rightSubview.backgroundColor = UIColor.whiteColor()
+
+        SWHQuickConstraints.addSubViewWithConstraints(rightSubview, superView: testView, quickConstraints: [
+            SWHConstraintType.CenterVertically(padding: 0),
+            SWHConstraintType.PinToRight(padding: 20),
+            SWHConstraintType.Width(width: 30),
+            SWHConstraintType.Height(height: 30)
+        ])
+
 Result
 
 ![alt tag](http://s17.postimg.org/vbb50hy5b/Screen_Shot_2015_09_24_at_21_23_40.png)
