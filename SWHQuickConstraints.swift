@@ -15,8 +15,8 @@ enum SWHConstraintType {
     case PinToLeft(padding: CGFloat)
     case PinToRight(padding: CGFloat)
     
-    case Width(width: CGFloat)
-    case Height(height: CGFloat)
+    case Width(_: CGFloat)
+    case Height(_: CGFloat)
     
     case CenterHorizontally(padding: CGFloat)
     case CenterVertically(padding: CGFloat)
