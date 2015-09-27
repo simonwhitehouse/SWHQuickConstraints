@@ -79,8 +79,6 @@ class SWHQuickConstraints {
                 attribute: .CenterY,
                 multiplier: 1,
                 constant: padding)]
-        default:
-            break
         }
         
         return NSLayoutConstraint.constraintsWithVisualFormat(visualFormatString!, options: [], metrics: nil, views: views)
