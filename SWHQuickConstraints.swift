@@ -15,10 +15,10 @@ enum SWHConstraintType {
     case PinToLeft(padding: CGFloat)
     case PinToRight(padding: CGFloat)
     
-    case Width(width: CGFloat)
-    case Height(height: CGFloat)
+    case Width(_: CGFloat)
+    case Height(_: CGFloat)
     
-    case CenterHorizontal(padding: CGFloat)
+    case CenterHorizontally(padding: CGFloat)
     case CenterVertically(padding: CGFloat)
     
 }
@@ -30,13 +30,12 @@ class SWHQuickConstraints {
         - adds one view as a subview of another
         - adds constraints for that view
     **/
-    class func addSubViewWithConstraints(subview: UIView, superView: UIView, quickConstraints: [SWHConstraintType]) {
-        superView.addSubview(subview)
+    class func position(view subview: UIView, withinContainerView superview: UIView, usingConstraints constraints: [SWHConstraintType]) {
         
         var allConstraints = [NSLayoutConstraint]()
         
-        for quickConstraint in quickConstraints {
-            if let constraints = buildConstraints(subview, quickConstraint: quickConstraint) {
+        for quickConstraint in constraints {
+            if let constraints = buildConstraintsForChild(subview, quickConstraint: quickConstraint) {
                 allConstraints.appendContentsOf(constraints)
             }
         }
@@ -44,8 +43,7 @@ class SWHQuickConstraints {
         NSLayoutConstraint.activateConstraints(allConstraints)
     }
     
-    
-    class func buildConstraints(subview: UIView, quickConstraint: SWHConstraintType) -> [NSLayoutConstraint]? {
+    class func buildConstraintsForChild(subview: UIView, quickConstraint: SWHConstraintType) -> [NSLayoutConstraint]? {
         
         let views = ["subview": subview]
         var visualFormatString: String?
@@ -63,7 +61,7 @@ class SWHQuickConstraints {
             visualFormatString = "H:[subview(==\(width))]"
         case .Height(let height):
             visualFormatString = "V:[subview(==\(height))]"
-        case .CenterHorizontal(let padding):
+        case .CenterHorizontally(let padding):
             return [NSLayoutConstraint(item: subview,
                 attribute: .CenterX,
                 relatedBy: .Equal,
@@ -79,12 +77,9 @@ class SWHQuickConstraints {
                 attribute: .CenterY,
                 multiplier: 1,
                 constant: padding)]
-        default:
-            break
         }
         
         return NSLayoutConstraint.constraintsWithVisualFormat(visualFormatString!, options: [], metrics: nil, views: views)
 
     }
-    
 }
