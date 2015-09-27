@@ -35,7 +35,7 @@ class SWHQuickConstraints {
         var allConstraints = [NSLayoutConstraint]()
         
         for quickConstraint in constraints {
-            if let constraints = buildConstraints(subview, quickConstraint: quickConstraint) {
+            if let constraints = buildConstraintsForChild(subview, quickConstraint: quickConstraint) {
                 allConstraints.appendContentsOf(constraints)
             }
         }
@@ -43,7 +43,7 @@ class SWHQuickConstraints {
         NSLayoutConstraint.activateConstraints(allConstraints)
     }
     
-    class func buildConstraints(subview: UIView, quickConstraint: SWHConstraintType) -> [NSLayoutConstraint]? {
+    class func buildConstraintsForChild(subview: UIView, quickConstraint: SWHConstraintType) -> [NSLayoutConstraint]? {
         
         let views = ["subview": subview]
         var visualFormatString: String?
@@ -82,5 +82,4 @@ class SWHQuickConstraints {
         return NSLayoutConstraint.constraintsWithVisualFormat(visualFormatString!, options: [], metrics: nil, views: views)
 
     }
-    
 }
