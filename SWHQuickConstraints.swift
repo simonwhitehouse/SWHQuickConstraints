@@ -30,12 +30,11 @@ class SWHQuickConstraints {
         - adds one view as a subview of another
         - adds constraints for that view
     **/
-    class func addSubViewWithConstraints(subview: UIView, superView: UIView, quickConstraints: [SWHConstraintType]) {
-        superView.addSubview(subview)
+    class func position(view subview: UIView, withinContainerView superview: UIView, usingConstraints constraints: [SWHConstraintType]) {
         
         var allConstraints = [NSLayoutConstraint]()
         
-        for quickConstraint in quickConstraints {
+        for quickConstraint in constraints {
             if let constraints = buildConstraints(subview, quickConstraint: quickConstraint) {
                 allConstraints.appendContentsOf(constraints)
             }
@@ -43,7 +42,6 @@ class SWHQuickConstraints {
         
         NSLayoutConstraint.activateConstraints(allConstraints)
     }
-    
     
     class func buildConstraints(subview: UIView, quickConstraint: SWHConstraintType) -> [NSLayoutConstraint]? {
         
