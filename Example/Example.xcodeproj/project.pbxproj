@@ -13,6 +13,7 @@
 		50D0475E1BB8296300FDC7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D0475D1BB8296300FDC7E4 /* Assets.xcassets */; };
 		50D047611BB8296300FDC7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D0475F1BB8296300FDC7E4 /* LaunchScreen.storyboard */; };
 		50D0476C1BB8296300FDC7E4 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0476B1BB8296300FDC7E4 /* ExampleTests.swift */; };
+		50D047771BB829A500FDC7E4 /* SWHQuickConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D047761BB829A500FDC7E4 /* SWHQuickConstraints.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		50D047671BB8296300FDC7E4 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D0476B1BB8296300FDC7E4 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		50D0476D1BB8296300FDC7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D047761BB829A500FDC7E4 /* SWHQuickConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SWHQuickConstraints.swift; path = ../../SWHQuickConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		50D047551BB8296300FDC7E4 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				50D047761BB829A500FDC7E4 /* SWHQuickConstraints.swift */,
 				50D047561BB8296300FDC7E4 /* AppDelegate.swift */,
 				50D047581BB8296300FDC7E4 /* ViewController.swift */,
 				50D0475A1BB8296300FDC7E4 /* Main.storyboard */,
@@ -198,6 +201,7 @@
 			files = (
 				50D047591BB8296300FDC7E4 /* ViewController.swift in Sources */,
 				50D047571BB8296300FDC7E4 /* AppDelegate.swift in Sources */,
+				50D047771BB829A500FDC7E4 /* SWHQuickConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +391,7 @@
 				50D047721BB8296300FDC7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50D047731BB8296300FDC7E4 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +400,7 @@
 				50D047751BB8296300FDC7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
