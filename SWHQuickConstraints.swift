@@ -63,7 +63,7 @@ class SWHQuickConstraints {
             visualFormatString = "H:[subview(==\(width))]"
         case .Height(let height):
             visualFormatString = "V:[subview(==\(height))]"
-        case .CenterHorizontal(let padding):
+        case .CenterHorizontally(let padding):
             return [NSLayoutConstraint(item: subview,
                 attribute: .CenterX,
                 relatedBy: .Equal,
