@@ -12,14 +12,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let
+        constraints = [
+            SWHConstraintType.CenterHorizontally(padding: 0),
+            SWHConstraintType.CenterVertically(padding: 0),
+            SWHConstraintType.Width(100),
+            SWHConstraintType.Height(100)
+        ]
+        
+        let
+        demoView = UIView()
+        demoView.translatesAutoresizingMaskIntoConstraints = false
+        demoView.backgroundColor = UIColor.redColor()
+        self.view.addSubview(demoView)
+        
+        SWHQuickConstraints.position(
+            view: demoView,
+            withinContainerView: self.view,
+            usingConstraints: constraints
+        )
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
